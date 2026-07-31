@@ -1,0 +1,38 @@
+name: Arbeitsmarkt-Tracker
+
+on:
+  schedule:
+    # 05:15 UTC = 07:15 (Sommerzeit) bzw. 06:15 (Winterzeit) in DE.
+    # Hinweis: GitHub-cron ist "best effort" und kann sich um Minuten verspaeten.
+    - cron: "15 5 * * *"
+  workflow_dispatch:        # erlaubt manuelles Ausloesen im Actions-Tab
+
+permissions:
+  contents: write           # noetig, damit der Job data.json zurueck committen darf
+
+concurrency:                # keine zwei Laeufe gleichzeitig
+  group: tracker
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Snapshot erfassen
+        run: python collect.py
+
+      - name: Daten committen
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json
+          git diff --staged --quiet || git commit -m "Snapshot $(date -u +%F)"
+          git push
