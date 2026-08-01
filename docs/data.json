@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "wo": "Braunschweig",
+    "umkreis": 10,
+    "aktualisiert": "2026-08-01T07:38:35+00:00"
+  },
+  "snapshots": [
+    {
+      "datum": "2026-08-01",
+      "werte": {
+        "gesamt/alle": 3901,
+        "neu/heute": 109,
+        "neu/7_tage": 389,
+        "arbeitszeit/vollzeit": 2818,
+        "arbeitszeit/teilzeit": 928,
+        "arbeitszeit/homeoffice": 0,
+        "arbeitszeit/minijob": 99,
+        "angebotsart/arbeit": 3417,
+        "angebotsart/ausbildung": 413,
+        "angebotsart/praktikum": 49,
+        "befristung/befristet": 138,
+        "befristung/unbefristet": 2254
+      }
+    }
+  ]
+}
