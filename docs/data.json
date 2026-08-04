@@ -2,7 +2,7 @@
   "meta": {
     "wo": "Braunschweig",
     "umkreis": 10,
-    "aktualisiert": "2026-08-03T08:43:29+00:00"
+    "aktualisiert": "2026-08-04T07:48:24+00:00"
   },
   "snapshots": [
     {
@@ -55,6 +55,10 @@
         "befristung/befristet": 136,
         "befristung/unbefristet": 2246
       }
+    },
+    {
+      "datum": "2026-08-04",
+      "werte": {}
     }
   ]
 }
