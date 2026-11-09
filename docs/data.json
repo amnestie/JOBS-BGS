@@ -2,7 +2,7 @@
   "meta": {
     "wo": "Braunschweig",
     "umkreis": 10,
-    "aktualisiert": "2026-11-08T11:56:59+00:00"
+    "aktualisiert": "2026-11-09T13:55:48+00:00"
   },
   "snapshots": [
     {
@@ -442,6 +442,10 @@
     },
     {
       "datum": "2026-11-08",
+      "werte": {}
+    },
+    {
+      "datum": "2026-11-09",
       "werte": {}
     }
   ]
